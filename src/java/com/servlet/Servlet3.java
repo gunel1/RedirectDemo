@@ -38,8 +38,8 @@ public class Servlet3 extends HttpServlet {
             out.println("<title>Servlet Servlet3</title>");            
             out.println("</head>");
             out.println("<body>");
-            Integer value=(Integer)request.getAttribute("value");
-            out.println("value="+value);
+            
+            out.println("value="+request.getParameter("value"));
             out.println("<h1>Servlet Servlet3 at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");

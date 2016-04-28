@@ -29,9 +29,9 @@ public class Servlet1 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int i;
-        request.setAttribute("value",i= 19);
-        if(i%2==0){
+       try{
+       Integer value=Integer.parseInt(request.getParameter("value"));
+        if(value%2==0){
             System.out.println("value is even.Redirecting to Servlet2");
          response.sendRedirect("Servlet2");
         
@@ -41,6 +41,10 @@ public class Servlet1 extends HttpServlet {
        RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/Servlet3");
          rd.forward(request, response);
         }
+       }
+       catch(NumberFormatException e){
+           
+       }
         }
     
 
