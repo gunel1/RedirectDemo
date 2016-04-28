@@ -43,6 +43,7 @@ public class Servlet1 extends HttpServlet {
         }
        }
        catch(NumberFormatException e){
+           System.out.println("Entered"+request.getParameter("value")+"is not number");
            
        }
         }

@@ -13,7 +13,8 @@
     </head>
     <body>
         <form action="Servlet1" method="post">
-            Enter number: <input type="text" name="value"/>
+            Enter number: <input type="text" name="value"/><br/>
+              <input type="submit" name="submit" value="submit"/>
         </form>
        
     </body>
